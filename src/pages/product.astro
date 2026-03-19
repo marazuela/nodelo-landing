@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import ProductHero from "../components/product/ProductHero.tsx";
+import Pipeline from "../components/product/Pipeline.tsx";
+import Architecture from "../components/product/Architecture.tsx";
+import StorageOptions from "../components/product/StorageOptions.tsx";
+import Comparison from "../components/product/Comparison.tsx";
+import OpenSource from "../components/product/OpenSource.tsx";
+import FAQ from "../components/product/FAQ.tsx";
+import ProductCTA from "../components/product/ProductCTA.tsx";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<Layout title="How Nodelo Works — Product Deep Dive">
+  <Nav />
+  <ProductHero client:load />
+  <Pipeline client:visible />
+  <Architecture client:visible />
+  <StorageOptions client:visible />
+  <Comparison client:visible />
+  <OpenSource client:visible />
+  <FAQ client:visible />
+  <ProductCTA client:visible />
+  <Footer />
+</Layout>

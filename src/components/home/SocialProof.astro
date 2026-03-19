@@ -1,0 +1,35 @@
+---
+const logos = [
+  { name: "Anthropic MCP", width: 120 },
+  { name: "Claude", width: 80 },
+  { name: "HubSpot", width: 100 },
+  { name: "Salesforce", width: 110 },
+  { name: "Slack", width: 80 },
+  { name: "Google", width: 90 },
+];
+---
+
+<section class="border-b border-border/50 py-12">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <p class="mb-8 text-center text-sm font-medium tracking-wide text-muted uppercase">
+      Connects to 19,400+ business systems via MCP
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+      {logos.map((logo) => (
+        <div
+          class="flex items-center gap-2 text-muted/50 transition-colors hover:text-muted"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="3" />
+            <line x1="12" y1="2" x2="12" y2="5" />
+            <line x1="12" y1="19" x2="12" y2="22" />
+            <line x1="2" y1="12" x2="5" y2="12" />
+            <line x1="19" y1="12" x2="22" y2="12" />
+          </svg>
+          <span class="text-sm font-medium tracking-wide">{logo.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

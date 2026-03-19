@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/home/Hero.tsx";
+import SocialProof from "../components/home/SocialProof.astro";
+import Problem from "../components/home/Problem.tsx";
+import Solution from "../components/home/Solution.tsx";
+import HowItWorks from "../components/home/HowItWorks.tsx";
+import Outcomes from "../components/home/Outcomes.tsx";
+import FinalCTA from "../components/home/FinalCTA.tsx";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <Nav />
+  <Hero client:load />
+  <SocialProof />
+  <Problem client:visible />
+  <Solution client:visible />
+  <HowItWorks client:visible />
+  <Outcomes client:visible />
+  <FinalCTA client:visible />
+  <Footer />
+</Layout>
