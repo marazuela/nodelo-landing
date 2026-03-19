@@ -28,8 +28,8 @@ export default function FinalCTA() {
         </motion.h2>
 
         <motion.p className="mt-6 text-lg text-muted" variants={fadeInUp}>
-          See Nodelo in action. A 30-minute demo with a Solutz engineer — no
-          pitch, just a walkthrough of what your knowledge graph would look like.
+          Sign up in seconds. Connect your tools. Open Claude. Your business
+          knowledge graph is ready — no terminal, no engineering, no waiting.
         </motion.p>
 
         <motion.div
@@ -37,10 +37,10 @@ export default function FinalCTA() {
           variants={fadeInUp}
         >
           <a
-            href="#"
+            href="/get-started"
             className="glow-blue rounded-xl bg-accent px-10 py-4 text-base font-semibold text-bg transition-all hover:brightness-110"
           >
-            Request a Demo
+            Get Started Free
           </a>
           <a
             href="/product"
@@ -54,7 +54,7 @@ export default function FinalCTA() {
         </motion.div>
 
         <motion.p className="mt-6 text-sm text-muted" variants={fadeInUp}>
-          Limited implementation slots for Q2 2026.
+          Open-source &middot; Free tier available &middot; No credit card required
         </motion.p>
       </motion.div>
     </section>

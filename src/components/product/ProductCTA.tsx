@@ -30,25 +30,18 @@ export default function ProductCTA() {
           variants={fadeInUp}
         >
           <a
-            href="#"
+            href="/get-started"
             className="glow-blue rounded-xl bg-accent px-8 py-3.5 text-base font-semibold text-bg transition-all hover:brightness-110"
           >
-            Request a Demo
+            Get Started Free
           </a>
           <a
-            href="#pricing"
+            href="https://github.com/marazuela/nodelo"
+            target="_blank"
+            rel="noopener"
             className="rounded-xl border border-border px-8 py-3.5 text-base font-semibold text-text transition-all hover:border-accent/30 hover:bg-surface"
           >
-            View Pricing
-          </a>
-          <a
-            href="#"
-            className="group flex items-center gap-1 text-base font-medium text-accent transition-colors hover:text-text"
-          >
-            Read the Docs
-            <span className="inline-block transition-transform group-hover:translate-x-1">
-              &rarr;
-            </span>
+            View on GitHub
           </a>
         </motion.div>
       </motion.div>

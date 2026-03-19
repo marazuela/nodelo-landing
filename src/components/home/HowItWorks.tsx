@@ -4,8 +4,20 @@ import { fadeInUp, staggerContainer } from "../../lib/animations";
 const steps = [
   {
     number: "01",
+    title: "Sign Up",
+    text: "Create your account in seconds. No credit card, no install, no terminal. Just your email.",
+    icon: (
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <rect x="6" y="8" width="28" height="24" rx="4" stroke="#58a6ff" strokeWidth="1.5" />
+        <path d="M6 14l14 8 14-8" stroke="#58a6ff" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="20" cy="22" r="3" fill="#58a6ff" fillOpacity="0.3" stroke="#58a6ff" strokeWidth="1" />
+      </svg>
+    ),
+  },
+  {
+    number: "02",
     title: "Connect",
-    text: "Point Nodelo at your existing tools. It connects via MCP — the same protocol Claude uses. One click per system.",
+    text: "Pick your tools — CRM, email, docs, chat. The wizard walks you through connecting each one and builds your knowledge graph automatically.",
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
         <circle cx="10" cy="12" r="4" stroke="#58a6ff" strokeWidth="1.5" />
@@ -21,24 +33,9 @@ const steps = [
     ),
   },
   {
-    number: "02",
-    title: "Talk",
-    text: "Have a 15-minute conversation with the agent. It learns your business structure, your key entities, your relationships. No forms. Just a conversation.",
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <rect x="4" y="6" width="24" height="16" rx="4" stroke="#58a6ff" strokeWidth="1.5" />
-        <rect x="12" y="18" width="24" height="16" rx="4" stroke="#bc8cff" strokeWidth="1.5" />
-        <circle cx="12" cy="14" r="1.5" fill="#58a6ff" />
-        <circle cx="17" cy="14" r="1.5" fill="#58a6ff" />
-        <circle cx="22" cy="14" r="1.5" fill="#58a6ff" />
-        <line x1="18" y1="26" x2="30" y2="26" stroke="#bc8cff" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
     number: "03",
-    title: "Done",
-    text: "Nodelo builds your knowledge graph. It stays current with nightly scans. Every AI agent in your stack can now query it.",
+    title: "Open Claude",
+    text: "One click installs Nodelo in Claude Desktop. Your business context is ready — ask Claude anything about your customers, deals, or operations.",
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
         <circle cx="20" cy="20" r="14" stroke="#3fb950" strokeWidth="1.5" />

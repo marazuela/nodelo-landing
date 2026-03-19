@@ -52,10 +52,10 @@ export default function Hero() {
           variants={fadeInUp}
         >
           <a
-            href="#contact"
+            href="/get-started"
             className="glow-blue rounded-xl bg-accent px-8 py-3.5 text-base font-semibold text-bg transition-all hover:brightness-110"
           >
-            Request a Demo
+            Get Started Free
           </a>
           <a
             href="#solution"

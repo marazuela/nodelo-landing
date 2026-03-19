@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import OnboardWizard from "../components/onboard/OnboardWizard.tsx";
+import "../styles/global.css";
+---
+
+<Layout title="Set Up Nodelo — Configure Your Knowledge Graph" description="Connect your business tools, define your ontology, and install Nodelo in Claude Desktop. Five minutes to a working knowledge graph.">
+  <Nav />
+  <OnboardWizard client:load />
+  <Footer />
+</Layout>

@@ -31,14 +31,17 @@ const currentPath = Astro.url.pathname;
         >
           Product
         </a>
-        <a href="#pricing" class="text-sm text-muted transition-colors hover:text-accent">
-          Pricing
-        </a>
-        <a href="#" class="text-sm text-muted transition-colors hover:text-accent">
+        <a
+          href="/get-started"
+          class:list={[
+            "text-sm transition-colors hover:text-accent",
+            currentPath === "/get-started" ? "text-accent" : "text-muted",
+          ]}
+        >
           Docs
         </a>
         <a
-          href="#"
+          href="https://github.com/marazuela/nodelo"
           target="_blank"
           rel="noopener"
           class="text-sm text-muted transition-colors hover:text-accent"
@@ -46,10 +49,10 @@ const currentPath = Astro.url.pathname;
           GitHub
         </a>
         <a
-          href="#contact"
+          href="/get-started"
           class="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition-all hover:brightness-110"
         >
-          Request Demo
+          Get Started
         </a>
       </div>
 
@@ -71,14 +74,13 @@ const currentPath = Astro.url.pathname;
   >
     <div class="flex flex-col gap-4 px-6 py-6">
       <a href="/product" class="text-sm text-muted transition-colors hover:text-accent">Product</a>
-      <a href="#pricing" class="text-sm text-muted transition-colors hover:text-accent">Pricing</a>
-      <a href="#" class="text-sm text-muted transition-colors hover:text-accent">Docs</a>
-      <a href="#" class="text-sm text-muted transition-colors hover:text-accent">GitHub</a>
+      <a href="/get-started" class="text-sm text-muted transition-colors hover:text-accent">Docs</a>
+      <a href="https://github.com/marazuela/nodelo" target="_blank" rel="noopener" class="text-sm text-muted transition-colors hover:text-accent">GitHub</a>
       <a
-        href="#contact"
+        href="/get-started"
         class="rounded-lg bg-accent px-4 py-2 text-center text-sm font-semibold text-bg"
       >
-        Request Demo
+        Get Started
       </a>
     </div>
   </div>
