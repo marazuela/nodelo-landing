@@ -1,22 +1,35 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../lib/animations";
+import { supabase } from "../lib/supabase";
 
 type FormState = "idle" | "submitting" | "sent" | "error";
 
 export default function GetStarted() {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<FormState>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email.trim()) return;
 
     setState("submitting");
+    setErrorMsg("");
 
-    // Phase 2: replace with Supabase signInWithOtp({ email })
-    await new Promise((r) => setTimeout(r, 1200));
-    setState("sent");
+    const { error } = await supabase.auth.signInWithOtp({
+      email: email.trim(),
+      options: {
+        emailRedirectTo: `${window.location.origin}/onboard`,
+      },
+    });
+
+    if (error) {
+      setErrorMsg(error.message);
+      setState("error");
+    } else {
+      setState("sent");
+    }
   }
 
   return (
@@ -125,7 +138,7 @@ export default function GetStarted() {
 
               {state === "error" && (
                 <p className="mt-3 text-sm text-orange">
-                  Something went wrong. Please try again.
+                  {errorMsg || "Something went wrong. Please try again."}
                 </p>
               )}
             </motion.form>
