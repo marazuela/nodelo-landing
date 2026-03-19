@@ -24,27 +24,33 @@ export default function Hero() {
       </Suspense>
 
       <motion.div
-        className="relative z-10 mx-auto max-w-4xl px-6 text-center"
+        className="relative z-10 mx-auto max-w-3xl px-6 text-center"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
       >
-        <motion.h1
-          className="gradient-text text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+        <motion.p
+          className="mb-4 text-sm font-medium uppercase tracking-widest text-accent"
           variants={fadeInUp}
         >
-          Your AI agents can reason.
+          Knowledge infrastructure for AI agents
+        </motion.p>
+
+        <motion.h1
+          className="gradient-text text-5xl font-extrabold leading-[1.1] tracking-tight sm:text-6xl md:text-7xl"
+          variants={fadeInUp}
+        >
+          Give your AI agents
           <br />
-          They just don't know your business.
+          business context
         </motion.h1>
 
         <motion.p
-          className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl"
+          className="mx-auto mt-6 max-w-xl text-lg text-muted sm:text-xl"
           variants={fadeInUp}
         >
-          Business context lives scattered across your CRM, email, docs, and
-          chat. None of it is structured for AI consumption. Nodelo fixes
-          that — automatically.
+          Nodelo connects to your tools, structures your data into a knowledge
+          graph, and serves it to every agent in your stack.
         </motion.p>
 
         <motion.div
@@ -68,9 +74,23 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        <motion.p className="mt-8 text-sm text-muted" variants={fadeInUp}>
-          Open-source &middot; MCP-native &middot; 19,400+ integrations
-        </motion.p>
+        <motion.div
+          className="mt-10 flex items-center justify-center gap-6 text-sm text-muted"
+          variants={fadeInUp}
+        >
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-green" />
+            Open-source
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-green" />
+            MCP-native
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-green" />
+            19,400+ integrations
+          </span>
+        </motion.div>
       </motion.div>
 
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-bg to-transparent" />
